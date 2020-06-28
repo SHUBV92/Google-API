@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Google Maps</title>
+    <style>
+        #map{
+            height: 400px;
+            width: 100%;
+        }
+
+        body{
+            width:5000px;
+        }
+
+        button {
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Google Maps</h1>
+    <div id="map"></div>
+    <button onclick="scrollMaps()">Zoom In</button>
+
+    <script>
+        function initMap () {
+            const options = {
+                zoom: 10,
+                center: {
+                    lat: 51.5366,  
+                    lng: -0.0758
+                }
+            }
+            const map = new google.maps.Map(
+                document.getElementById("map"), options
+            );
+
+            const infoWindow = 
+        }
+
+
+        function addMarker (coords){
+            const marker = new google.maps.Marker({position: options.center, map:map})
+        }
+
+        function scrollMaps(){
+            window.scrollBy(100, 0)
+        }
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAe2TKldSe-prHE4pkzmnfqbMNEAeBwCj4&callback=initMap">
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
